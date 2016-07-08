@@ -1,0 +1,122 @@
+	/* Left Navigation */
+	#leftNav {
+		z-index:15;
+		position:fixed;
+		top:70px;
+		min-height:750px;
+		width:150px;
+		margin-left:-104px;
+	}
+	
+	ul#mainNav {
+		text-align:right;
+		margin:0 0 0 -15px;
+		padding:0;
+		font-size:16px;
+		position:fixed;
+		top:100px;
+		left:15px;
+		width:31px;
+	}
+	
+	#leftNav:hover ul#mainNav {
+		width:150px;
+	}
+	
+		ul#mainNav li {
+			list-style-type:none;
+			margin:0;
+			font-weight:normal;
+			cursor:pointer;
+			text-align:left;
+			height:60px;
+			font-size:.75em;
+			opacity:.5;
+			padding:10px 0 10px 15px;
+		}
+				
+		ul#mainNav li.active,
+		ul#mainNav li:hover {
+			width:150px;
+			opacity:1;
+		}
+
+			ul#mainNav li a {
+				text-decoration:none;
+				color:#a8aeb2;
+			}
+			
+				ul#mainNav li:hover,
+				ul#mainNav li a:hover,
+				ul#mainNav li.active a,
+				ul#mainNav li.active {
+					color:#fff;
+					opacity:1;
+				}
+
+	.navText {
+		padding-right:8px;
+	}
+	
+	span.navImg {
+		background:url(../images/ih_nav_icons.png) no-repeat right -31px;
+		display:block;
+		float:left;
+		width:15px;
+		height:16px;
+		margin-right:10px;
+	}
+	
+		@-moz-document url-prefix() {
+			span.navImg {
+				margin-top:2px;
+			}
+		}
+	
+	span.homeNavImg {
+		background-position: -2px -2px;
+	}
+
+	a:hover span.homeNavImg,
+	.active a span.homeNavImg {
+		background-position: -2px -19px;
+		opacity:1;
+	}
+
+	span.disclosureContentAdminNavImg {
+		background-position: -2px -36px;
+	}
+
+	a:hover span.disclosureContentAdminNavImg,
+	.active a span.disclosureContentAdminNavImg	 {
+		background-position: -2px -53px;
+		opacity:1;
+	}
+
+	span.disclosureDocRequestNavImg {
+		background-position: -2px -71px;
+	}
+
+	a:hover span.disclosureDocRequestNavImg,
+	.active a span.disclosureDocRequestNavImg {
+		background-position: -2px -88px;
+		opacity:1;
+	}
+
+	span.productAdminNavImg {
+		background-position: -2px -105px;
+	}
+
+	a:hover span.productAdminNavImg,
+	.active a span.productAdminNavImg {
+		background-position: -2px -122px;
+		opacity:1;
+	}
+
+	span.noImg {
+		background-image:none;
+	}
+
+	.leftNavClosed{
+		left: 0;
+	}

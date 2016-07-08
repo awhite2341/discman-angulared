@@ -1,0 +1,99 @@
+<!DOCTYPE html ng-app="discman">
+<!--[if lt IE 7]>      <html lang="en" ng-app="discman" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="discman" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="discman" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="discman" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" href="thirdparty/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/global-text.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/navigation.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/customColor.css">
+
+  <!-- third-party javascript -->
+  <script type="text/javascript" src="thirdparty/jquery-1.12.2.js"></script>
+  <script type="text/javascript" src="thirdparty/jquery-ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="thirdparty/bootstrap/js/bootstrap.js"></script>
+
+  <!-- select2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.js"></script>
+
+
+</head>
+<body class="lightBkg">
+    <div id="disclosureContentAdmin" class="Disclosure Content Admin">
+        <page-header></page-header>
+        <!-- end header div -->
+
+        <page-nav-bar></page-nav-bar>
+        <!-- end #leftNav div -->
+        <div ng-view></div><!--This works through an ajax call so it will not work until there is a database connection.-->
+        <!--This will all be moved to ContentAdmin.HTML and will be accessed using routes (ng-view)-->
+        <div class="container">
+
+            <div class="col-lg-12">
+                <div id="notificationsActivities" class="margin-bottom60px dropShadow">
+                    <h3 class="h3ContainerNoCollapse active topCap">Content Admin</h3>
+                    <div class="podContent active bottomCap">
+                        <div class="col-lg-12">
+                            <div class="appPods">
+                                <div class="formElementsHolder" ng-controller="ContentAdminController as caCtrl">
+                                    <div class="formElement">
+                                        <label>Content Name</label>
+                                        <input placeholder="Provide Content Name" type="text" ng-model="caCtrl.contentAdmin.ContentName">
+                                        <span ng-hide="caCtrl.contentAdmin.ContentName">Please provide a value for Content Name.</span>
+                                    </div>
+                                    <!--Create new conponent for this since it is used in multiple spots
+                                    create new Directive with Controller that gets options from options tbl and apply any necessary JQuery in directives link
+                                    then set actual value in Content Admin Directive
+                                    -->
+                                    <div class="formElement">
+                                        <label>Audience</label>
+                                        <div style="display: inline-block">
+                                            <div class="fieldPod" ng-repeat="audience in caCtrl.contentAdmin.Audiences">
+                                                <input type="checkbox" name="audience" ng-model="audience.isChecked" ng-value="true"><label>{{audience.text}}</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="formElement">
+                                        <label>Content Tag(s)</label>
+                                        <select id="contentTagsSelect" multiple="multiple" data-tags="true">
+                                            <option label="Any Content">Any Content</option>
+                                            <optgroup label="Performance" mopOptionsType="ContentTags-Performance" class="mopFieldHelper mopSelect2"></optgroup>
+                                            <optgroup label="Yield" mopOptionsType="ContentTags-Yield" class="mopFieldHelper mopSelect2"></optgroup>
+                                            <optgroup label="Characteristics" mopOptionsType="ContentTags-Characterist" class="mopFieldHelper mopSelect2"></optgroup>
+                                            <optgroup label="Risk Measure" mopOptionsType="ContentTags-RiskMeasure" class="mopFieldHelper mopSelect2"></optgroup>
+                                            <optgroup label="Disclosure Types" mopOptionsType="DisclosureType" class="mopFieldHelper mopSelect2"></optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<!--app javascript files-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="app.js"></script>
+<script src="components/pageheader/pageheaderDirective.js"></script>
+<script src="components/navbar/navbarController.js"></script>
+<script src="components/navbar/navbarDirective.js"></script>
+<script src="components/shared/resizeDirective.js"></script>
+<script src="components/contentadmin/ContentAdminController.js"></script>
+</body>
+</html>

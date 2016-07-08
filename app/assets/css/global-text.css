@@ -1,0 +1,183 @@
+body {
+	font-family:Arial;
+	font-size:1em;
+}		
+
+h1, h2, p {
+	margin-top:0;
+	font-weight:normal;
+}
+
+p {
+	color:#000;
+}
+
+h3 {
+	margin:0;
+	font-weight:normal;
+}
+
+h5 {
+	color:#000;
+	font-weight:bold;
+}
+
+button, select, input, label, textarea {
+	font-family:Arial;
+	color:#000;
+	font-weight:normal;
+}
+
+a, img, button, button:hover {
+	outline:none;
+	border:none;
+}
+
+a {
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+button {
+	padding:5px 10px;
+	font-size:.75em;
+}
+
+#footer ul, #footer ul li {
+	font-size:1em;
+}
+
+
+input[type=checkbox] {
+	margin-right:5px;
+}
+
+.smallLinks {
+	font-size:.75em;
+}
+
+select option {
+	padding:4px 5px;
+}
+
+.errorMessage {
+	//display:none;
+	color:#990000;
+	font-size:12px;
+	margin-left:15px;
+}
+
+:disabled {
+	background-color:#ccc;
+	color:#666;
+	border:0 none;
+}
+
+#dialog {
+	font-size:.75em;
+}
+
+ul.formattingCheckboxList {
+	padding:0;
+	margin:0;
+	width:50%;
+	float:left;
+}
+
+ul.formattingCheckboxList li{
+	list-style-type:none;
+}
+
+.checkAll,
+.uncheckAll,
+.checkUncheckAll {
+	font-size:.625em;
+	margin-right:10px;
+}
+
+.uncheckAll {
+	display:none;
+}
+
+#selectfundClassCheckboxesDiv label,
+#fundClassesTickersCheckboxesDiv label {
+	width:80px;
+}
+
+#fundClassesTickersCheckboxesDiv .tickerInput {
+	width:80px;
+	margin-bottom:15px;
+}
+
+.contentToAppearInDocCheckboxes .checkboxLabelFirst {
+	width:25%;
+}
+
+.col5 ul {
+	padding:0;
+	margin:0;
+}
+
+.col5 ul li {
+	list-style-type:none;
+	float:none;
+	margin-bottom:10px;
+}
+
+.col5 ul li input,
+.col5 ul li label {
+	float:none;
+}
+
+#otherTagsTextArea {
+	width:79%;
+	height:50px;
+}
+
+#sectorOptionSelect {
+	width:70px;
+	float:none;
+}
+
+#closeContentToAppearInDocDiv {
+	display:none;
+}
+
+#contentToAppearHeader {
+	float:left;
+	margin-right:20px;
+	margin-top:0;
+}
+
+#openContentToAppearInDocDiv,
+#closeContentToAppearInDocDiv {
+	font-size:.625em;
+	float:left;
+}
+
+/* THIS IS HERE TO OVERRIDE THE DEFAULT JQUERY-UI STYLE */
+body .ui-widget-overlay {
+	background:50% 50% #222222;
+	opacity: 0.7;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+	background:url(../images/permanent_ui-icons_000000_256x240.png) -81px -129px no-repeat #ccc;
+	margin:-8px 11px 0 0 !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close:hover {
+	background-color:#fff;
+}
+
+.clearFieldButton {
+	background:url(../images/permanent_ui-icons_fff_256x240.png) -95px -127px no-repeat;
+	width:20px;
+	height:20px;
+	margin:4px 0 0 10px;
+	display:none;
+}

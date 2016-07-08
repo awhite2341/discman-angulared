@@ -1,0 +1,262 @@
+/* *********** README!!!! *********** */
+/* These element colors and backgrounds may be customized per customer's request. */
+/* Please do NOT adjust widths, padding or margins on these elements as there will be an impact to the layout */
+/* ********************************** */
+/**********************
+CLIENT LOGO
+	NOTE: DO NOT CHANGE the following properties on the class ".clientLogo" immediately following this comment:
+	 - background
+	 - position
+	 - left
+	 - cursor
+	
+	IMPORTANT!!!! The customer logo to be used here MUST ALWAYS be named "customer-logo.png and should ALWAYS be placed in the customer folder"
+**********************/
+.companyLogo {
+  /*************** vvv DO NOT CHANGE THESE vvv ************/
+  background: url(../images/customer-logo.png) no-repeat;
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+  /*************** ^^^ DO NOT CHANGE THESE ^^^ ************/
+  /*************** vvv These may require adjustment vvv ************/
+  /* actual width of the logo image file */
+  width: 211px;
+  /* actual height of the logo image file */
+  height: 60px;
+  /* if the logo is 34px tall, no adjustment needed here */
+  top: 3px;
+  /*************** ^^^ These may require adjustment ^^^ ************/
+}
+#mainContent {
+  background: none!important;
+}
+/* Global coloring variables */
+/* vvv standard - do not change vvv */
+/* ^^^ standard - do not change ^^^ */
+/* vvv client-specific vvv */
+/* ^^^ client-specific ^^^ */
+/* End global coloring variables */
+h1 {
+  color: #1e4764;
+}
+a,
+body .ui-widget-content a {
+  color: #005eb8;
+}
+/* Standard black, white, green, red and yellow*/
+.black {
+  color: #000;
+}
+.blackBkg {
+  background-color: #000;
+}
+.white {
+  color: #fff;
+}
+.whiteBkg {
+  background-color: #fff;
+}
+.red {
+  color: #990000;
+}
+.green {
+  color: #09AA07;
+}
+.yellowBkg {
+  background-color: #ffff00;
+}
+/* End standard black, white, red and yellow*/
+/* Standard page elements - DO NOT CHANGE */
+#header,
+#footer,
+#leftNav {
+  box-shadow: 0 0 10px #000;
+}
+/* End standard page elements */
+/* Customer-specific colors */
+.customLightBkg {
+  background-color: #6fa6cc;
+}
+.customMediumBkg {
+  background-color: #005eb8;
+}
+
+.customDarkBkg,
+h3.inactive:hover,
+h3.active,
+h5.accordion.active,
+h5.accordion.inactive:hover {
+  background-color: #0a344c;
+  color: #fff;
+}
+h3.active:hover,
+h3.inactive,
+h5.accordion.inactive,
+h5.accordion.active:hover {
+  background-color: #6fa6cc;
+  color: #fff;
+}
+h3,
+.tabNavDiv h3,
+.ui-widget-header {
+  background: #6fa6cc;
+}
+.plusMinus,
+.plusMinusH5 {
+  color: #fff;
+}
+.podContent h3,
+h3.red {
+  background: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari only override */
+  ::i-block-chrome,
+  .ui-widget-header {
+    background: #0a344c;
+  }
+}
+h3 a:hover {
+  text-decoration: none;
+  background-color: #a8aeb2;
+}
+.white {
+  color: #fff;
+}
+/* Light styles */
+.lightBkg {
+  background-color: #e6e4e4;
+}
+.lightTxt {
+  color: #e6e4e4;
+}
+select option:nth-child(odd) {
+  background-color: #e6e4e4;
+}
+/* Medium Light styles */
+.mediumLightBkg {
+  background-color: #bcc1c4;
+}
+.mediumLightTxt {
+  color: #bcc1c4;
+}
+/* Medium Medium styles */
+.mediumMedBkg {
+  background-color: #a8aeb2;
+}
+.mediumMedTxt {
+  color: #a8aeb2;
+}
+.mediumMedBttmBorder {
+  border-bottom: 4px solid #a8aeb2;
+}
+.mediumMedBttmBorderThin {
+  border-bottom: 1px solid #a8aeb2;
+}
+/* Medium Dark styles */
+.mediumDarkBkg {
+  background-color: #394248;
+}
+.mediumDarkTxt {
+  color: #394248;
+}
+/* Dark styles */
+.darkBkg {
+  background-color: #222;
+}
+.darkTxt {
+  color: #222;
+}
+/* Global button colors */
+.buttonColor,
+.clearFieldButton,
+.powerFormQuickButton,
+h5.buttonColor,
+h5.buttonColor:hover {
+  background-color: #0066A1;
+  color: #fff;
+  border: 0 none;
+  outline: none;
+  cursor: auto;
+}
+.buttonColor:hover,
+.buttonColor.active,
+.clearFieldButton:hover,
+.powerFormQuickButton:hover {
+  background-color: #0a344c;
+  color: #fff;
+  cursor: pointer;
+}
+.snth {
+  font-weight: bold;
+  color: #990000;
+}
+.isUrgent {
+  font-weight: bold;
+  color: #990000;
+  cursor: pointer;
+}
+#bcStatusHolder a .stepLabel {
+  color: #fff;
+}
+#persepctiveSelectorHolder {
+  background-color: #6fa6cc;
+  width: 9em;
+  padding: 10px;
+}
+.newsNotificationPods,
+.regularContentBkgWhite {
+  background-color: #fff;
+  color: #222;
+}
+#notificationsActivities h4 {
+  background-color: #e6e4e4;
+  color: #0a344c;
+  padding: 1%;
+  margin: 0;
+}
+#notificationTabs {
+  width: 96%;
+  margin: 0 1% 1%;
+  font-size: .75em;
+}
+#notificationTabs.ui-widget-content {
+  border: 0 none;
+}
+#notificationTabs .ui-widget-header {
+  border-left: 0 none;
+  border-bottom: 1px solid #0a344c;
+  border-right: 0 none;
+  border-top: 0 none;
+  background-color: #fff;
+}
+#notificationTabs .tabPod {
+  border-left: 1px solid #0a344c;
+  border-bottom: 1px solid #0a344c;
+  border-right: 1px solid #0a344c;
+}
+#documentIcons span {
+  color: #6fa6cc;
+}
+#documentIcons li:hover span {
+  color: #fff;
+}
+#componentDataEntry h4 {
+  background-color: #0a344c;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.25em;
+}
+h3.h3ContainerNoCollapse,
+h3.h3ContainerNoCollapse:hover {
+  background-color: #0a344c;
+  color: #fff;
+}
+.hasParent {
+  box-shadow: 0 0 10px #394248;
+}
+/* jQuery-ui overrides */
+.ui-tabs .ui-tabs-nav {
+  padding: 0px;
+}

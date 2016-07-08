@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="col-lg-12">
+        <div id="notificationsActivities" class="margin-bottom60px dropShadow">
+            <h3 class="h3ContainerNoCollapse active topCap">Content Admin</h3>
+            <div class="podContent active bottomCap">
+                <div class="col-lg-12">
+                    <div class="appPods">
+                        <div class="formElementsHolder" ng-controller="ContentAdminController as caCtrl">
+                            <div class="formElement">
+                                <label>Content Name</label>
+                                <input placeholder="Provide Content Name" type="text" ng-model="caCtrl.contentAdmin.ContentName">
+                                <span ng-hide="caCtrl.contentAdmin.ContentName">Please provide a value for Content Name.</span>
+                            </div>
+                            <!--Create new conponent for this since it is used in multiple spots
+                            create new Controller that gets options then set value in Content Admin Directive
+                            -->
+                            <div class="formElement">
+                                <label>Audience</label>
+                                <div style="display: inline-block">
+                                    <div class="fieldPod" ng-repeat="audience in caCtrl.contentAdmin.Audiences">
+                                        <input type="checkbox" name="audience" ng-model="audience.isChecked" ng-value="true"><label>{{audience.text}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
